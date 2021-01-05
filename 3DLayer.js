@@ -15,6 +15,7 @@ var map = new mapboxgl.Map({
 // data from OpenStreetMap.
 map.on('load', function () {
     // Insert the layer beneath any symbol layer.
+    //Symbol layers are layers of text/icons
     var layers = map.getStyle().layers;
 
     var labelLayerId;
@@ -62,4 +63,8 @@ map.on('load', function () {
         labelLayerId
     );
 
+    
+
 });
+
+
