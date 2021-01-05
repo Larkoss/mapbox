@@ -1,5 +1,5 @@
 // Create a mapbox-compatible deck.gl layer
-const myDeckLayer = new MapboxLayer({
+const layerDeck = new MapboxLayer({
     id: 'my-scatterplot',
     type: ScatterplotLayer,
     data: [
@@ -8,9 +8,4 @@ const myDeckLayer = new MapboxLayer({
     getPosition: d => d.position,
     getRadius: d => d.size,
     getColor: [200, 0, 0]
-  });
-
-  // Insert the layer before mapbox labels
-  map.on('load', () => {
-    map.addLayer(myDeckLayer, 'waterway-label');
   });
