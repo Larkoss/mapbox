@@ -14,5 +14,6 @@ map.on('load', function () {
     
     //map.addLayer(layer3dBuildings);
     //map.addLayer(layerDeck);
-    map.addLayer(layerTerrainLines);
+    //map.addLayer(layerTerrainLines);
+    map.addLayer(layerKatoArodes);
 });
