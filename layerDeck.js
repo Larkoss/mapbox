@@ -7,5 +7,5 @@ const layerDeck = new MapboxLayer({
     ],
     getPosition: d => d.position,
     getRadius: d => d.size,
-    getColor: [200, 0, 0]
+    getColor: [238, 244, 241]
   });

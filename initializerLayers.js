@@ -11,8 +11,8 @@ map.on('load', function () {
             break;
         }
     }
-
-    map.addLayer(layer3dBuildings);
+    
+    //map.addLayer(layer3dBuildings);
+    //map.addLayer(layerDeck);
     map.addLayer(layerTerrainLines);
-    map.addLayer(layerDeck);
 });
