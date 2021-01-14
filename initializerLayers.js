@@ -16,4 +16,5 @@ map.on('load', function () {
     //map.addLayer(layerDeck);
     //map.addLayer(layerTerrainLines);
     map.addLayer(layerKatoArodes);
+    map.addLayer(layerStRaphaelMarina);
 });
