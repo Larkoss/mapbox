@@ -15,6 +15,7 @@ map.on('load', function () {
     //map.addLayer(layer3dBuildings);
     //map.addLayer(layerDeck);
     //map.addLayer(layerTerrainLines);
-    map.addLayer(layerKatoArodes);
-    map.addLayer(layerStRaphaelMarina);
+    //map.addLayer(layerKatoArodes);
+    //map.addLayer(layerStRaphaelMarina);
+    //map.addLayer(layerBuildingsData);
 });
