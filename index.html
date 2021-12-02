@@ -20,11 +20,55 @@
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <!-- -->
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+
+
     <div id="map"></div>
+    <div class="eleInfo">
+        <div>Longitude: <span id='lng'></span></div>
+        <div>Latitude: <span id='lat'></span></div>
+        <div>Elevation: <span id='ele'></span></div>
+    </div>
+    <div class="buildingsInfo">
+        <div>Buildings: <span id='blds'></span></div>
+        <div>Roads: <span id='rds'></span></div>
+    </div>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
+        .boxdraw {
+            background: rgba(56, 135, 190, 0.1);
+            border: 2px solid #3887be;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+        }
+
+        
+        .eleInfo {
+            position: relative;
+            font-family: sans-serif;
+            margin-top: 5px;
+            margin-left: 5px;
+            padding: 5px;
+            width: 200px;
+            border: 2px solid black;
+            font-size: 20px;
+            color: #222;
+            background-color: #b5bcff;
+        }
+
+        .buildingsInfo {
+            position: absolute;
+            font-family: sans-serif;
+            margin-top: 5px;
+            margin-left: 5px;
+            padding: 5px;
+            width: 200px;
+            border: 2px solid black;
+            font-size: 20px;
+            color: #222;
+            background-color: #ff9c9c;
         }
 
         #map {
@@ -38,17 +82,17 @@
 
 
 <body>
-
-
     <!-- Scripts -->
     <script src="Initializer.js"></script>
     <script src="layerBuildings.js"></script> -->
+    <script src="layerRoads.js"></script>
     <!-- <script src="layerBuildingsCluster.js"></script> -->
-    <!-- <script src="layer3dBuildings.js"></script> -->
-    <!-- <script src="layerTerrainLines.js"></script> -->
+    <script src="layerTerrainLines.js"></script> -->
     <!-- <script src="layerDeck.js"></script> -->
     <script src="InitializerLayers.js"></script>
-    <script src="controlCoordinates.js"></script>
+    <script src="controlSearchCoordinates.js"></script>
+    <!-- <script src="controlSelectionBox.js"></script> -->
+    <script src="controlClickCoordinates.js"></script>
 </body>
 
 </html>
