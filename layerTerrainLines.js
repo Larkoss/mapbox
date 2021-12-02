@@ -15,7 +15,7 @@ const layerTerrainLines = {
         'line-cap': 'round'
     },
     'paint': {
-        'line-color': '#ff69b4',
+        'line-color': '#4980e6',
         'line-width': 1
     }
 };

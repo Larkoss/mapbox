@@ -1,7 +1,9 @@
 map.on('load', function () {
     map.addSource('buildings-data', {
         type: 'geojson',
-        data: '/buildingsWGS84.geojson',
+        data: './buildings.geojson',
+        //buffer: 0,
+        //tolerance: 0.75
     });
 });
 const layerBuildings = {
@@ -9,12 +11,27 @@ const layerBuildings = {
     'type': 'fill',
     'source': 'buildings-data',
     'layout': {
-        //'icon-allow-overlap': 'false'
+        //'icon-allow-overlap': true
     },
     'paint': {
-        'fill-color': '#34f7d7',
-        'fill-opacity': 0.8
+        'fill-outline-color': '#3c997b',
+        'fill-color': '#3cf0b7',
+        'fill-opacity': 0.5
     }
 };
 
+const layerBuildingsHighlighted = {
+    'id': 'buildings-data-highlighted',
+    'type': 'fill',
+    'source': 'buildings-data',
+    'layout': {
+        //'icon-allow-overlap': true
+    },
+    'paint': {
+        'fill-outline-color': '#3c997b',
+        'fill-color': '#eb3434',
+        'fill-opacity': 0.75
+    },
+    'filter': ['in', 'objectid', '']
+};
 

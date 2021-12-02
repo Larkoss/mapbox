@@ -3,8 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGFya29zcyIsImEiOiJja2l5Zmc3YzIweG5pMnVueGhvb
 //Initialize map
 var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/light-v10',  //style url
-    center: [33.166757169161833, 34.710964441451424],     //starting position [lng, lat]
-    zoom: 16,
+    center: [33.377, 35.160],     //starting position [lng, lat]
+    zoom: 14,
     pitch: 0,                          //angle
     bearing: 0,
     container: 'map',

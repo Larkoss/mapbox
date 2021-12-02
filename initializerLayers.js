@@ -1,6 +1,16 @@
+// Disable default box zooming.
+map.boxZoom.disable();
+
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+    closeButton: false
+});
+
+var hoveredStateId = null;
+
 //Attach created layers
 map.on('load', function () {
-    
+
     var layers = map.getStyle().layers;
 
     //the addLayer method takes 2 arguments: the layer as an object, and a string
@@ -16,12 +26,11 @@ map.on('load', function () {
             break;
         }
     }
-    
-    //map.addLayer(layer3dBuildings);
-    //map.addLayer(layerDeck);
-    //map.addLayer(layerTerrainLines);
-    //map.addLayer(layerKatoArodes);
-    //map.addLayer(layerStRaphaelMarina);
-    map.addLayer(layerBuildings, firstSymbolId); 
+
+    map.addLayer(layerTerrainLines, firstSymbolId);
+    map.addLayer(layerRoads, firstSymbolId);
+    map.addLayer(layerRoadsHighlighted, firstSymbolId);
+    map.addLayer(layerBuildings, firstSymbolId);
+    map.addLayer(layerBuildingsHighlighted, firstSymbolId);
     
 });
