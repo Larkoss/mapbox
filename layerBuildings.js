@@ -1,7 +1,7 @@
 map.on('load', function () {
     map.addSource('buildings-data', {
         type: 'geojson',
-        data: './buildings.geojson',
+        data: './buildingsWGS84.geojson',
         //buffer: 0,
         //tolerance: 0.75
     });
