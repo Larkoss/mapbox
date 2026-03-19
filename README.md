@@ -14,8 +14,6 @@ The live site uses a smaller Nicosia-only demo dataset so it can be hosted direc
 
 Based on the development notes in the logbook, the work progressed in roughly these stages:
 
-- Learning the project stack, mainly HTML, JavaScript, and the Mapbox platform.
-- Studying Mapbox documentation and examples, then building an initial interactive map prototype.
 - Experimenting first with Mapbox-provided 3D building data.
 - Collecting building datasets from Cyprus government sources.
 - Converting source data from GML to GeoJSON so it could be rendered in the browser.
@@ -23,8 +21,6 @@ Based on the development notes in the logbook, the work progressed in roughly th
 - Adding custom layers for buildings, roads, and contour lines.
 - Implementing interaction logic for counting nearby buildings and roads.
 - Adding an elevation query that finds and marks the highest point within a 1 km radius of a clicked location.
-
-The logbook also notes the use of QGIS during data preparation, especially for format conversion and GeoJSON cleanup.
 
 ## Features
 
@@ -43,8 +39,6 @@ The current version of the project includes:
 
 ## Data Workflow
 
-The repository shows the same workflow described in the logbook:
-
 - Source building data was available in GML format.
 - Intermediate converted files were stored as GeoJSON.
 - Final rendered data was prepared in WGS84 GeoJSON for direct use in the web map.
@@ -57,18 +51,6 @@ Relevant project files:
 - `roadnetwork_original.geojson`: main roads dataset used by the app.
 - `buildings_nicosia_demo.json`: smaller Nicosia buildings dataset used by the deployed demo.
 - `roads_nicosia_demo.json`: smaller Nicosia roads dataset used by the deployed demo.
-
-## Project Structure
-
-- `index.html`: main page and script loading order.
-- `initializer.js`: Mapbox token and initial map setup.
-- `initializerLayers.js`: adds the custom layers after the map loads.
-- `layerBuildings.js`: buildings source and styling.
-- `layerRoads.js`: roads source and styling.
-- `layerTerrainLines.js`: terrain contour source and styling.
-- `controlSearchCoordinates.js`: coordinate search control.
-- `controlClickCoordinates.js`: click handling, counting, and elevation query logic.
-- `controlSelectionBox.js`: earlier selection-box interaction prototype.
 
 ## Running Locally
 
@@ -86,29 +68,3 @@ Then open:
 ```text
 http://localhost:8000/index.html
 ```
-
-A local server is required because the app loads local GeoJSON files in the browser.
-
-## Hosting With GitHub Pages
-
-This repository can be hosted on GitHub Pages because it is a static site.
-
-Basic deployment steps:
-
-1. Push the repository to GitHub.
-2. Open `Settings` -> `Pages`.
-3. Under `Build and deployment`, choose `Deploy from a branch`.
-4. Select your main branch and the root folder.
-5. Save and wait for the Pages URL to be published.
-
-The project has already been adjusted so the script filenames match the real file casing, which is important on GitHub Pages.
-
-Current GitHub Pages deployment:
-
-- https://larkoss.github.io/mapbox/
-
-## Notes
-
-- The GeoJSON files in this repository are large, so the first page load may take some time.
-- The app uses a public Mapbox access token in `initializer.js`. If the token expires or is restricted, replace it with your own public token.
-- Some features mentioned in the logbook were exploratory or intermediate steps. This README focuses on the workflow recorded in the logbook and the functionality currently present in the repository.
