@@ -1,7 +1,7 @@
 map.on('load', function () {
     map.addSource('buildings-data', {
         type: 'geojson',
-        data: './buildingsWGS84.geojson',
+        data: './buildings_nicosia_demo.json',
         //buffer: 0,
         //tolerance: 0.75
     });

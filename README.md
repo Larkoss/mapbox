@@ -4,6 +4,10 @@ This repository contains a browser-based GIS prototype built with Mapbox GL JS a
 
 The application combines local GeoJSON datasets with Mapbox services to support map exploration, coordinate search, road and building counts around a selected point, and elevation lookup within a 1 km radius.
 
+Live demo: https://larkoss.github.io/mapbox/
+
+The live site uses a smaller Nicosia-only demo dataset so it can be hosted directly on GitHub Pages. The original full Cyprus GeoJSON files are still included in the repository for reference and preprocessing.
+
 ![Application screenshot](./Screenshot.png)
 
 ## Project Summary
@@ -51,6 +55,8 @@ Relevant project files:
 - `buildingsGEOJSON/`: converted GeoJSON building files.
 - `buildingsWGS84.geojson`: main buildings dataset used by the app.
 - `roadnetwork_original.geojson`: main roads dataset used by the app.
+- `buildings_nicosia_demo.json`: smaller Nicosia buildings dataset used by the deployed demo.
+- `roads_nicosia_demo.json`: smaller Nicosia roads dataset used by the deployed demo.
 
 ## Project Structure
 
@@ -96,6 +102,10 @@ Basic deployment steps:
 5. Save and wait for the Pages URL to be published.
 
 The project has already been adjusted so the script filenames match the real file casing, which is important on GitHub Pages.
+
+Current GitHub Pages deployment:
+
+- https://larkoss.github.io/mapbox/
 
 ## Notes
 

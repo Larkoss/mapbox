@@ -1,7 +1,7 @@
 map.on('load', function () {
     map.addSource('roads', {
         type: 'geojson',
-        data: './roadnetwork_original.geojson',
+        data: './roads_nicosia_demo.json',
         //buffer: 0,
         //tolerance: 3.5
     });
