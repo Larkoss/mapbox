@@ -5,14 +5,11 @@
     <link rel="icon" href="https://assets-global.website-files.com/5f291534dceb6cd8f0e7a02f/5f3527c64f482b996e7ec096_mapbox%20logo%20sign.png">
     <meta charset="utf-8" />
     <title>Map Box</title>
-    <!-- Mapbox api -->
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
-    <!-- DeckGL api-->
     <script src="https://unpkg.com/deck.gl@^6.2.0/deckgl.min.js"></script>
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
-    <!-- Geocoder api-->
     <script
         src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
     <link rel="stylesheet"
@@ -20,20 +17,7 @@
         type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-    <!-- -->
-    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
-
-
-    <div id="map"></div>
-    <div class="eleInfo">
-        <div>Longitude: <span id='lng'></span></div>
-        <div>Latitude: <span id='lat'></span></div>
-        <div>Elevation: <span id='ele'></span></div>
-    </div>
-    <div class="buildingsInfo">
-        <div>Buildings: <span id='blds'></span></div>
-        <div>Roads: <span id='rds'></span></div>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
         .boxdraw {
             background: rgba(56, 135, 190, 0.1);
@@ -81,16 +65,25 @@
     </style>
 </head>
 
-
 <body>
-    <!-- Scripts -->
-    <script src="Initializer.js"></script>
-    <script src="layerBuildings.js"></script> -->
+    <div id="map"></div>
+    <div class="eleInfo">
+        <div>Longitude: <span id='lng'></span></div>
+        <div>Latitude: <span id='lat'></span></div>
+        <div>Elevation: <span id='ele'></span></div>
+    </div>
+    <div class="buildingsInfo">
+        <div>Buildings: <span id='blds'></span></div>
+        <div>Roads: <span id='rds'></span></div>
+    </div>
+
+    <script src="initializer.js"></script>
+    <script src="layerBuildings.js"></script>
     <script src="layerRoads.js"></script>
     <!-- <script src="layerBuildingsCluster.js"></script> -->
-    <script src="layerTerrainLines.js"></script> -->
+    <script src="layerTerrainLines.js"></script>
     <!-- <script src="layerDeck.js"></script> -->
-    <script src="InitializerLayers.js"></script>
+    <script src="initializerLayers.js"></script>
     <script src="controlSearchCoordinates.js"></script>
     <!-- <script src="controlSelectionBox.js"></script> -->
     <script src="controlClickCoordinates.js"></script>
